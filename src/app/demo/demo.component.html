@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Systém Tipovania:</h1>
+
+    <div class="jumbotron item" *ngFor="let comment of commentTypes; let i=index">
+      <h2 class="text-primary">{{commentHeaders[i]}}</h2>
+      {{comment}}
+    </div>
+  </div>
+</div>

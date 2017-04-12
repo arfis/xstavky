@@ -1,0 +1,61 @@
+<div class="container">
+
+<div class="jumbotron">
+  <h1>Tipérske vysvetlivky</h1>
+
+  <div class="row">
+    <div class="well well-sm well-blue col-sm-12 col-lg-12 col-md-12">
+      <h3 class="collapse-section"
+          (click)="isCollapsedMatch = !isCollapsedMatch">Zápas
+        <span class="glyphicon glyphicon-chevron-right"
+              [ngClass]="{'glyphicon-rotate':!isCollapsedMatch}"></span>
+      </h3>
+      <div (collapsed)="setHeight(el, 0)"
+           (expanded)="setHeight(el, 0);setHeight(el, el.scrollHeight)"
+           [collapse]="isCollapsedMatch"
+           class="card card-block card-header block" #el>
+        <div class="table-responsive">
+          <table class="table table-condensed table-hover">
+            <thead>
+            <tr>
+              <td>Stávka</td>
+              <td>Výsledok zápasu</td>
+              <td>Výsledok stávky</td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr [ngClass]="{'danger': match.winner === 'Prehra',
+                            'success': match.winner === 'Výhra',
+                            'warning': match.winner === 'Refundácia vkladu',
+                            'bottom-border' : i%3===2}"
+                *ngFor="let match of matches; let i = index">
+              <td class="left-value">{{match.stake}}</td>
+              <td>{{match.result}}</td>
+              <td>{{match.winner}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <total-table [total]="total" [title]="'Total Nad'" [over]="true"></total-table>
+    <total-table [total]="total" [title]="'Total Pod'" [over]="false"></total-table>
+  </div>
+
+  <div class="row">
+    <total-table [total]="totalIndividual" [title]="'Individuálny Total - Nad'" [over]="true"></total-table>
+    <total-table [total]="totalIndividual" [title]="'Individuálny Total - Pod'" [over]="false"></total-table>
+  </div>
+
+<div class="row">
+  <total-table [total]="asianHandicap" [title]="'Azijský handicap Pozitív'" [over]="true"></total-table>
+  <total-table [total]="asianHandicap" [title]="'Azijský handicap Negatív'" [over]="false"></total-table>
+
+</div>
+
+</div>
+</div>

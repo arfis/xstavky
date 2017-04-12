@@ -1,0 +1,52 @@
+<div class="well well-sm well-blue col-sm-6 col-lg-6 col-md-6">
+  <h3 (click)="isCollapsed = !isCollapsed"
+      class="collapse-section">
+    {{title}}
+    <span class="glyphicon glyphicon-chevron-right"
+          [ngClass]="{'glyphicon-rotate':!isCollapsed}"></span>
+  </h3>
+  <div (collapsed)="setHeight(el, 0)"
+       (expanded)="setHeight(el, 0);setHeight(el, el.scrollHeight)"
+       [collapse]="isCollapsed"
+       class="card card-block card-header block" #el>
+    <div class="table-responsive">
+      <!--<input [(ngModel)]="stake" type="text" class="form-control">-->
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <td>Stávka</td>
+            <td>Výsledok zápasu</td>
+            <td>Výsledok stávky</td>
+          </tr>
+        </thead>
+        <tbody *ngIf="!over">
+
+          <tr [ngClass]="{'danger': match.resultStake === 'Prehra',
+                              'success': match.resultStake === 'Výhra',
+                              'warning': match.resultStake.indexOf('Refundácia') !== -1,
+                              'bottom-border' : isBorder(title,match.result, i)}"
+              *ngFor="let match of total | stakeFilter : stake; let i = index">
+            <td>{{match.stake}}</td>
+            <td>{{match.result}}</td>
+            <td>{{match.resultStake}}</td>
+
+          </tr>
+        </tbody>
+
+        <tbody *ngIf="over">
+        <tr [ngClass]="{'danger': match.resultTotalStake === 'Prehra',
+                            'success': match.resultTotalStake === 'Výhra',
+                            'warning': match.resultTotalStake.indexOf('Refundácia') !== -1,
+                            'bottom-border' : isBorder(title,match.result, i)}"
+            *ngFor="let match of total | stakeFilter : stake; let i = index">
+          <td>{{match.total}}</td>
+          <td>{{match.resultTotal}}</td>
+          <td>{{match.resultTotalStake}}</td>
+
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.left-value{
+  vertical-align:inherit !important;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .table {
+    font-size: 10px !important;
+  }
+}
+.table{
+  width:100% !important;
+  text-align:center;
+  font-size: 15px;
+  border-radius: 5px;
+  margin: 0px auto;
+  float: none;
+}
+
+.table tr{
+  cursor: pointer;
+}
+
+.winner{
+  background-color:lawngreen;
+}
+
+.jumbotron{
+  min-height: 400px;
+}
+
+.bg{
+  border-radius:15px;
+}
+.well{
+  text-align:center;
+  border-radius:6px;
+}
+.well-blue{
+  background-color: #1a931a !important;
+  opacity:1 !important;
+}
+.well-yellow{
+  background-color:lightgoldenrodyellow !important;
+}
+.block {
+  display: block !important;
+  overflow: hidden !important;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+}
+
+.bottom-border{
+  border-bottom: 2px solid rgba(15, 15, 15, 0.18);
+}
+.collapse-section:hover{
+  color:whitesmoke;
+}
+.collapse-section{
+  cursor:pointer;
+}
+.glyphicon-rotate{
+  -webkit-animation-duration: 4000ms;
+  -webkit-transform: rotate(90deg);
+  -moz-transform:    rotate(90deg);
+  -ms-transform:     rotate(90deg);
+  -o-transform:      rotate(90deg);
+  transform:         rotate(90deg);
+}

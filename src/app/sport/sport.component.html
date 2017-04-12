@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Športové Novinky</h1>
+    <div class="jumbotron item" *ngFor="let item of aktContent.items">
+      <h3><a href="{{item.link}}">{{item?.title}}</a></h3>
+      <div [innerHtml]="item?.description">
+      </div>
+    </div>
+  </div>
+</div>

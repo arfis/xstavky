@@ -1,0 +1,28 @@
+carousel slide img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.middle{
+  text-align:center;
+}
+.footer{
+  width:100%;
+  height:320px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color:whitesmoke;
+}
+
+.footer .title{
+  text-align:center;
+}
+
+.nav-tabs{
+  display:inline-block !important;
+  float:none !important;
+  border-bottom:1px solid black !important;
+}
+
+
+
+
