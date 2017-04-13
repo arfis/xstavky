@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import {AppRouterModule} from "./app.routing.module";
 import {WelcomeComponent} from "./welcome.component";
 import { CarouselModule } from 'ng2-bootstrap/carousel';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { CarouselModule } from 'ng2-bootstrap/carousel';
     AppRouterModule,
     CarouselModule.forRoot()
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

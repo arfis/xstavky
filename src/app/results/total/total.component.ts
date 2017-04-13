@@ -11,7 +11,7 @@ export class TotalComponent{
 
   @Input() total : Total[];
   @Input() title : String;
-  @Input() over : boolean = true;
+  @Input() under : boolean = true;
 
   public isCollapsed :boolean = true;
 

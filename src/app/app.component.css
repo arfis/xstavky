@@ -1,16 +1,79 @@
+
+
+@media only screen and (max-width: 480px) {
+  .nav-tabs > li {
+    float: none !important;
+    margin-bottom: -1px;
+  }
+  .nav-tabs{
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.76);
+  }
+  .container-fluid{
+    margin-top: 85px;
+  }
+
+  .nav > li > a{
+    margin-bottom:0px !important;
+  }
+}
 carousel slide img {
   width: 100%;
   height: 300px;
   overflow: hidden;
 }
-.middle{
-  text-align:center;
+
+.nav > li > a{
+  margin-bottom:20px;
+  color: #A0D096;
+  border-radius: 25px;
 }
+
+.active > a{
+  background-color: #A0D096 !important;
+  color: rgba(0, 0, 0, 0.79) !important;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+  border-color: transparent !important;
+}
+
+.nav > li > a:hover{
+  color: rgba(0, 0, 0, 0.79) !important;
+}
+@media only screen and (min-width: 480px){
+  .middle {
+    background-color: rgba(0, 0, 0, 0.76);
+  }
+  .logo{
+    position: absolute;
+    z-index: 999;
+    left: 80px;
+    top: 5px;
+  }
+}
+
+
+@media only screen and (max-width : 480px) {
+  .logo{
+    margin-top:6px;
+  }
+  .mobile-banned{
+    display:none;
+  }
+}
+.middle{
+  height: 42px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .footer{
   width:100%;
-  height:320px;
   background-color: rgba(0, 0, 0, 0.75);
   color:whitesmoke;
+  text-align:center;
 }
 
 .footer .title{
@@ -22,6 +85,8 @@ carousel slide img {
   float:none !important;
   border-bottom:1px solid black !important;
 }
+
+
 
 
 

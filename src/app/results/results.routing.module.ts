@@ -8,7 +8,7 @@ import {ResultsComponent} from "./results.component";
 const calendarRoutes: Route[] = [
 
   {
-    path: 'results',
+    path: 'vysvetlivky',
     component: ResultsComponent,
     children: [
 

@@ -1,31 +1,43 @@
+<div class="logo">
+  <img class="img-responsive" src="assets/logo5.png">
+</div>
+
+<carousel class="mobile-banned">
+  <slide>
+    <img class="img-responsive" src="assets/1.jpg" alt="First slide">
+  </slide>
+  <slide>
+    <img class="img-responsive" src="assets/2.jpg" alt="Second slide">
+  </slide>
+  <slide>
+    <img class="img-responsive" src="assets/3.jpg" alt="Second slide">
+  </slide>
+</carousel>
+
+<nav>
+  <div class="middle">
+    <ul class="nav nav-tabs">
+      <li [class.active]="isLinkSelected('/sport')">
+        <a (click)="active='/sport'" [routerLink]="['/sport']">Športové novinky</a>
+      </li>
+      <li [class.active]="isLinkSelected('/system')">
+        <a (click)="active='/system'" [routerLink]="['/system']">Systém tipovania</a>
+      </li>
+      <li [class.active]="isLinkSelected('/vysvetlivky')">
+        <a (click)="active='/vysvetlivky'" [routerLink]="['/vysvetlivky']">Tipérske vysvetlivky</a>
+      </li>
+      <!--<li><a [routerLink]="['/second']">Nic</a></li>-->
+    </ul>
+  </div>
+</nav>
 <div class="container-fluid">
-
-  <carousel>
-    <slide>
-      <img src="assets/1.jpg" alt="First slide">
-    </slide>
-    <slide>
-      <img src="assets/2.jpg" alt="Second slide">
-    </slide>
-  </carousel>
-
-  <nav>
-    <div class="middle">
-      <ul class="nav nav-tabs">
-        <li><a [routerLink]="['/sport']">Športové novinky</a></li>
-        <li><a [routerLink]="['/first']">Systém tipovania</a></li>
-        <li><a [routerLink]="['/results']">Tipérske vysvetlivky</a></li>
-        <!--<li><a [routerLink]="['/second']">Nic</a></li>-->
-      </ul>
-    </div>
-  </nav>
 
   <div class="row">
 
     <!--<div class="col-md-3 col-sm-3 col-lg-3">-->
 
-      <!--<h3>Directory structure tree</h3>-->
-      <!--<TreeViewComponent></TreeViewComponent>-->
+    <!--<h3>Directory structure tree</h3>-->
+    <!--<TreeViewComponent></TreeViewComponent>-->
     <!--</div>-->
 
     <div class="col-md-12 col-sm-12 col-lg-12">
@@ -38,10 +50,11 @@
 </div>
 <div class="footer">
   <div class="container">
-    <div class="row">
-      <div class="title">
-        <h2>Footer</h2>
-      </div>
+    <div>
+      <!--<h2>Footer</h2>-->
+      <small>Zákaz hrania hazardných hier osobám mladším ako 18 rokov. Hazardné hry predstavujú riziko vysokých
+        finančných strát. Nadmerné hranie prináša so sebou aj možné zdravotné riziká.
+      </small>
     </div>
   </div>
 </div>

@@ -9,17 +9,17 @@ import {DemoComponent} from "./demo/demo.component";
 const appRoutes: Route[] = [
 
   {
-    path: 'first',
+    path: 'system',
     component: DemoComponent
   },
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'first'
+    redirectTo: 'system'
   },
   {
     path: '**',
-    redirectTo: 'first'
+    redirectTo: 'system'
   }
 
 ];

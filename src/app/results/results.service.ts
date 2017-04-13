@@ -523,10 +523,10 @@ export class ResultsService {
         resultTotalStake:'Výhra'
       },{
         stake:'1 over/nad (50)',
-        result:'34:16(50 gólov)',
+        result:'34:16 (50 gólov)',
         resultStake:'Refundácia vkladu',
         total:'under/pod (50)',
-        resultTotal:'34:16(50 gólov)',
+        resultTotal:'34:16 (50 gólov)',
         resultTotalStake:'Refundácia vkladu'
       },{
         stake:'1 over/nad (50)',
@@ -544,10 +544,10 @@ export class ResultsService {
         resultTotalStake:'Výhra'
       },{
         stake:'1 over/nad (50.5)',
-        result:'34:16(50 gólov)',
+        result:'34:16 (50 gólov)',
         resultStake:'Prehra',
         total:'under/pod (50.5)',
-        resultTotal:'34:16(50 gólov)',
+        resultTotal:'34:16 (50 gólov)',
         resultTotalStake:'Výhra'
       },{
         stake:'1 over/nad (50.5)',
@@ -699,10 +699,10 @@ export class ResultsService {
         resultTotalStake:'Výhra'
       },{
         stake:'over/nad (50)',
-        result:'34:16(50 gólov)',
+        result:'34:16 (50 gólov)',
         resultStake:'Refundácia vkladu',
         total:'under/pod (50)',
-        resultTotal:'34:16(50 gólov)',
+        resultTotal:'34:16 (50 gólov)',
         resultTotalStake:'Refundácia vkladu'
       },{
         stake:'over/nad (50)',
@@ -720,10 +720,10 @@ export class ResultsService {
         resultTotalStake:'Výhra'
       },{
         stake:'over/nad (50.5)',
-        result:'34:16(50 gólov)',
+        result:'34:16 (50 gólov)',
         resultStake:'Prehra',
         total:'under/pod (50.5)',
-        resultTotal:'34:16(50 gólov)',
+        resultTotal:'34:16 (50 gólov)',
         resultTotalStake:'Výhra'
       },{
         stake:'over/nad (50.5)',

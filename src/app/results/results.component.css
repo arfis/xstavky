@@ -39,20 +39,11 @@
   border-radius:6px;
 }
 
-.well-blue{
-  background-color: #1a931a !important;
-  opacity:1 !important;
-}
-
 .block {
   display: block !important;
   overflow: hidden !important;
   -webkit-transition: height .5s;
   transition: height .5s;
-}
-
-.bottom-border{
-  border-bottom: 2px solid rgba(15, 15, 15, 0.18);
 }
 
 .glyphicon-rotate{

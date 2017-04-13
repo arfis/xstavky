@@ -9,7 +9,7 @@ import {Demo2Component} from "./demo2.component";
 const calendarRoutes: Route[] = [
 
   {
-    path: 'first',
+    path: 'system',
     component: DemoComponent,
     children: [
 

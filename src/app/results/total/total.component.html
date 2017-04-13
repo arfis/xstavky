@@ -19,11 +19,11 @@
             <td>Výsledok stávky</td>
           </tr>
         </thead>
-        <tbody *ngIf="!over">
+        <tbody *ngIf="!under">
 
-          <tr [ngClass]="{'danger': match.resultStake === 'Prehra',
-                              'success': match.resultStake === 'Výhra',
-                              'warning': match.resultStake.indexOf('Refundácia') !== -1,
+          <tr [ngClass]="{'danger-bg': match.resultStake === 'Prehra',
+                              'success-bg': match.resultStake === 'Výhra',
+                              'warning-bg': match.resultStake.indexOf('Refundácia') !== -1,
                               'bottom-border' : isBorder(title,match.result, i)}"
               *ngFor="let match of total | stakeFilter : stake; let i = index">
             <td>{{match.stake}}</td>
@@ -33,10 +33,10 @@
           </tr>
         </tbody>
 
-        <tbody *ngIf="over">
-        <tr [ngClass]="{'danger': match.resultTotalStake === 'Prehra',
-                            'success': match.resultTotalStake === 'Výhra',
-                            'warning': match.resultTotalStake.indexOf('Refundácia') !== -1,
+        <tbody *ngIf="under">
+        <tr [ngClass]="{'danger-bg': match.resultTotalStake === 'Prehra',
+                            'success-bg': match.resultTotalStake === 'Výhra',
+                            'warning-bg': match.resultTotalStake.indexOf('Refundácia') !== -1,
                             'bottom-border' : isBorder(title,match.result, i)}"
             *ngFor="let match of total | stakeFilter : stake; let i = index">
           <td>{{match.total}}</td>
