@@ -14,21 +14,36 @@ import {Item} from "./model/Item.model";
 export class SportComponent implements OnInit{
 
   aktContent : Feed = new Feed();
-  smeContent : Feed = new Feed();
-  items: Item[];
-  status : string;
-  test : string = "testing sentencee";
 
   constructor(private sportService : SportService){
-    this.sportService.getFeedContent("Akt").subscribe(
-      feed => this.aktContent = feed
-    );
 
-    // this.sportService.getFeedContent("Sme").subscribe(
-    //   feed => this.smeContent = feed
-    // );
+    let currentDate : Date = new Date();
+    let lastDownload : Date = new Date(JSON.parse(localStorage.getItem('feedDownload')));
+    let aktContent : Feed = JSON.parse(localStorage.getItem('feed'));
+
+    if (!aktContent ||
+          (this.duratesMoreThan(currentDate, lastDownload, 30))) {
+
+      this.sportService.getFeedContent("Akt").subscribe(
+        feed => {
+          this.aktContent = feed;
+          localStorage.setItem('feed', JSON.stringify(this.aktContent));
+          localStorage.setItem('feedDownload', JSON.stringify(new Date()));
+        }
+      );
+    }
+
+    else {
+      this.aktContent = aktContent;
+    }
+
   }
 
+  duratesMoreThan(firstDate : Date, secondDate : Date, shouldDurate : number){
+    shouldDurate = shouldDurate*1000;
+    let duration = firstDate.valueOf() - secondDate.valueOf();
+    return (duration > shouldDurate);
+  }
 
   ngOnInit(): void {
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -6,17 +6,28 @@ import {ActivatedRoute, Router} from "@angular/router";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app works!';
+export class AppComponent implements OnInit, AfterViewInit{
+
   active : string = "/system";
   routeInfo;
+  title = "Xstavky.sk";
 
-  constructor(){
+  constructor(private elementRef : ElementRef){
     if(window.location.hash.length > 1) {
       this.active = window.location.hash.substr(1, window.location.hash.length);
     }
     else
       this.active="/system";
+  }
+
+  ngAfterViewInit(): void {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "http://ban.tipsport.sk/c/textA.php?pl=7923";
+    this.elementRef.nativeElement.appendChild(s);
+  }
+
+  ngOnInit(): void {
   }
 
   isLinkSelected(link){

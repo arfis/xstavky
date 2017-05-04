@@ -14,44 +14,58 @@
   </slide>
 </carousel>
 
-<nav>
-  <div class="middle">
-    <ul class="nav nav-tabs">
-      <li [class.active]="isLinkSelected('/sport')">
-        <a (click)="active='/sport'" [routerLink]="['/sport']">Športové novinky</a>
-      </li>
-      <li [class.active]="isLinkSelected('/system')">
-        <a (click)="active='/system'" [routerLink]="['/system']">Systém tipovania</a>
-      </li>
-      <li [class.active]="isLinkSelected('/vysvetlivky')">
-        <a (click)="active='/vysvetlivky'" [routerLink]="['/vysvetlivky']">Tipérske vysvetlivky</a>
-      </li>
-      <!--<li><a [routerLink]="['/second']">Nic</a></li>-->
-    </ul>
-  </div>
-</nav>
+<div class="sticky-nav-wrapper" appSticky [stickyClass]="'fixed-navbar'" [offsetTop]="0" [ngClass]="{'fixed-element': fixed}">
+  <nav>
+    <div class="middle">
+      <ul class="nav nav-tabs">
+        <li [class.active]="isLinkSelected('/sport')">
+          <a (click)="active='/sport'" [routerLink]="['/sport']">Športové novinky</a>
+        </li>
+        <li [class.active]="isLinkSelected('/system')">
+          <a (click)="active='/system'" [routerLink]="['/system']">Systém tipovania</a>
+        </li>
+        <li [class.active]="isLinkSelected('/vysvetlivky')">
+          <a (click)="active='/vysvetlivky'" [routerLink]="['/vysvetlivky']">Tipérske vysvetlivky</a>
+        </li>
+        <li [class.active]="isLinkSelected('/bonus')">
+          <a (click)="active='/bonus'" [routerLink]="['/bonus']">Bonus</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
 <div class="container-fluid">
 
   <div class="row">
 
-    <!--<div class="col-md-3 col-sm-3 col-lg-3">-->
-
-    <!--<h3>Directory structure tree</h3>-->
-    <!--<TreeViewComponent></TreeViewComponent>-->
-    <!--</div>-->
-
-    <div class="col-md-12 col-sm-12 col-lg-12">
+    <div class="col-md-10 col-sm-10 col-lg-10">
 
       <router-outlet></router-outlet>
 
     </div>
 
+    <div class="col-md-2 col-sm-2 col-lg-2">
+      <div class="fb-page mobile-banned" data-href="https://www.facebook.com/XStavkysk-1395296710721273/?fref=ts"
+           data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+           data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/XStavkysk-1395296710721273/?fref=ts"
+                    class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/XStavkysk-1395296710721273/?fref=ts">XStavky.sk</a>
+        </blockquote>
+      </div>
+
+      <div class="advert mobile-banned" id="tipAd7923" appSticky
+           [offsetTop]="30"
+           [stickyClass]="'fixed-element'"></div>
+
+    </div>
   </div>
 </div>
 <div class="footer">
   <div class="container">
     <div>
-      <!--<h2>Footer</h2>-->
       <small>Zákaz hrania hazardných hier osobám mladším ako 18 rokov. Hazardné hry predstavujú riziko vysokých
         finančných strát. Nadmerné hranie prináša so sebou aj možné zdravotné riziká.
       </small>

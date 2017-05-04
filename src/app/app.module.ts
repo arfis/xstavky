@@ -8,13 +8,22 @@ import {AppRouterModule} from "./app.routing.module";
 import {WelcomeComponent} from "./welcome.component";
 import { CarouselModule } from 'ng2-bootstrap/carousel';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { BonusComponent } from './bonus/bonus.component';
+import {Ng2StickyModule} from "ng2-sticky";
+import {NguiStickyModule} from "@ngui/sticky";
+import { StickyDirective } from './utils/sticky/sticky.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    BonusComponent,
+    StickyDirective,
   ],
+
   imports: [
+    NguiStickyModule,
+    Ng2StickyModule,
     BrowserModule,
     FormsModule,
     HttpModule,
@@ -22,6 +31,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     CarouselModule.forRoot()
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

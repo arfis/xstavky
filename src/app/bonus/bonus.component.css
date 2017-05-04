@@ -1,0 +1,24 @@
+.advert-bonus{
+  float:left;
+}
+
+.sticky-container > div {
+  border: 1px solid #333;
+  background-image: linear-gradient(rgba(255, 255, 255, 1) 50%, transparent 50%, transparent);
+  background-size: 50px 50px;
+  height: 300px;
+}
+.div-middle {
+  background-color: rgba(0,0,255, .2);
+}
+div[ngui-sticky] {
+  min-width: 400px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 10px;
+}
+.div-middle div[ngui-sticky] {
+  margin: 0;
+}

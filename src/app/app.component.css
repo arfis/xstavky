@@ -1,5 +1,3 @@
-
-
 @media only screen and (max-width: 480px) {
   .nav-tabs > li {
     float: none !important;
@@ -10,13 +8,14 @@
     background-color: rgba(0, 0, 0, 0.76);
   }
   .container-fluid{
-    margin-top: 85px;
+    margin-top: 125px;
   }
 
   .nav > li > a{
     margin-bottom:0px !important;
   }
 }
+
 carousel slide img {
   width: 100%;
   height: 300px;
@@ -27,6 +26,10 @@ carousel slide img {
   margin-bottom:20px;
   color: #A0D096;
   border-radius: 25px;
+}
+
+.sticky-nav-wrapper{
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
 }
 
 .active > a{
@@ -46,12 +49,32 @@ carousel slide img {
   .middle {
     background-color: rgba(0, 0, 0, 0.76);
   }
-  .logo{
+  .logo img{
     position: absolute;
     z-index: 999;
-    left: 80px;
-    top: 5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
+  .container-fluid{
+    margin-top:15px !important;
+  }
+
+  .fixed-element{
+    position:fixed;
+    top:30px;
+    width:100%;
+    z-index:9999;
+  }
+
+  .fixed-navbar{
+    position:fixed;
+    top:0px;
+    width:100%;
+    z-index:9999;
+  }
+
 }
 
 
@@ -65,7 +88,6 @@ carousel slide img {
 }
 .middle{
   height: 42px;
-  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -83,11 +105,24 @@ carousel slide img {
 .nav-tabs{
   display:inline-block !important;
   float:none !important;
-  border-bottom:1px solid black !important;
+  border-bottom: 0px solid black !important;
 }
 
+.fb-likes{
+  position:fixed;
+}
+.logo > .fb-page{
+  position:absolute;
+  width:100%;
+  top:0;
+}
 
+.advert{
+  margin-top:15px;
+}
 
-
-
-
+.sticky-navbar{
+  z-index:9999;
+  width: 100% !important;
+  position:absolute;
+}

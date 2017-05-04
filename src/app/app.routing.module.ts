@@ -5,6 +5,7 @@ import {SportModule} from "./sport/sports.module";
 import {DemoModule} from "./demo/demo.module";
 import {ResultsModule} from "./results/results.module";
 import {DemoComponent} from "./demo/demo.component";
+import {BonusRoutingModule} from "./bonus/bonus.routing.module";
 
 const appRoutes: Route[] = [
 
@@ -30,7 +31,8 @@ const appRoutes: Route[] = [
     RouterModule.forRoot(appRoutes),
     SportModule,
     DemoModule,
-    ResultsModule
+    ResultsModule,
+    BonusRoutingModule
   ],
   exports: [
 

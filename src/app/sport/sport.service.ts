@@ -22,7 +22,6 @@ export class SportService {
 
     switch(url){
       case 'Akt' :
-        console.log("returning aktuality");
         return this.getFeed(this.AktUrl);
       case 'Sme' :
         return this.getFeed(this.smeUrl);
